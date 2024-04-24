@@ -7,8 +7,39 @@ elif 18<age<42:
 else: 
     print("Tu es le PATRON")"""
 
+# Exercice 2 :
+import random
+temp=random.randrange(0, 30)
+print(temp)
+# temp=int(input("Donnez une température : "))
+if 0<temp<=10:
+    print("Cool")
+elif 11<=temp<=20:
+    print("Tepid")
+else:
+    print("Warm")
+
+#Exerice 3:
+import datetime
+
+jour_actuel = datetime.datetime.now().strftime("%A")
+match jour_actuel:
+    case "Monday":
+        print(f"Nous sommes Lundi")
+    case "Tuesday":
+        print(f"Nous sommes Mardi")
+    case "Wednesday":
+        print(f"Nous sommes Mercredi")
+    case "Thursday":
+        print(f"Nous sommes Jeudi")
+    case "Friday":
+        print(f"Nous sommes Vendredi")
+    case "Saturday":
+        print(f"Nous sommes Samedi")
+    case "Sunday":
+        print(f"Nous sommes Dimanche")
+        
 # Exerice 4:
-''''
 print("Hello!")
 print("Trois chemins s'offrent à toi. Choisis la bonne voie.")
 choix1 = input("Vas-tu à gauche, à droite ou tout droit ? (gauche/droite/avant) ")
@@ -47,7 +78,7 @@ if choix1 == "gauche":
         elif choix3 == "regarder autour":
             print("En regardant autour, tu trouves un passage secret !")
         else:
-            print("Tu choisis de ne pas ouvrir la boîte et continues ton chemin.")
+            print("Tu choisis de ne pas ouvrir la boîte et tu meurs.")
 
     else:
         print("Tu as décidé de brûler quelque chose.")
@@ -106,7 +137,7 @@ elif choix1 == "droite":
             print("En cherchant plus, tu trouves une carte cachée.")
         else:
             print("Tu ne trouves rien à brûler et continues ton chemin.")
-            
+
 elif choix1 == "avant":
     print("Attention !")
     choix2 = input(
@@ -152,10 +183,11 @@ elif choix1 == "avant":
         elif choix3 == "chercher plus":
             print("En cherchant plus, tu trouves une carte cachée.")
         else:
-            print("Tu ne trouves rien à brûler et continues ton chemin.")
-'''
+            print("La grande réponse sur la vie, l’univers et le reste !")
 
-# Exercice 4:
+
+# Exercice 5:
+# Non de la variable qui n'existe pas
 ma_variable=2
 try:
     resultat = str(ma_variable)  
@@ -166,4 +198,10 @@ else:
 
 print(resultat)
 
+# Solution
+var = 42
+if var == 42:
+    print(42)
+else:
+    print("cette variable n'existe pas")
 # Exercice 5:
