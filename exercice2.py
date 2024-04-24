@@ -8,6 +8,7 @@ else:
     print("Tu es le PATRON")"""
 
 # Exercice 2 :
+"""
 import random
 temp=random.randrange(0, 30)
 print(temp)
@@ -38,6 +39,7 @@ match jour_actuel:
         print(f"Nous sommes Samedi")
     case "Sunday":
         print(f"Nous sommes Dimanche")
+"""
         
 # Exerice 4:
 print("Hello!")
@@ -190,7 +192,7 @@ elif choix1 == "avant":
 # Non de la variable qui n'existe pas
 ma_variable=2
 try:
-    resultat = str(ma_variable)  
+    resultat = str(ma_variable2)  
 except NameError:
     resultat = "cette variable n'existe pas"
 else:
@@ -202,6 +204,6 @@ print(resultat)
 var = 42
 if var == 42:
     print(42)
-else:
-    print("cette variable n'existe pas")
-# Exercice 5:
+else:print("cette variable n'existe pas")
+
+# Exercice 6:
