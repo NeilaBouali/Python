@@ -7,29 +7,26 @@ def myPutStr(string):
 
 
 # Test de la fonction
-print(myPutStr("Hello World"))  # Devrait afficher: Hello World
-print(myPutStr(123))  # Devrait afficher: et pourquoi pas 42 ?
-print(myPutStr(3.14))  # Devrait afficher: et pourquoi pas 42 ?
-print(myPutStr("42"))  # Devrait afficher: 42
+print(myPutStr("Hello"))  # Devrait afficher: Hello World
+print(myPutStr(657565))  # Devrait afficher: et pourquoi pas 42 ?
 
 
 # Autre méthode sans  isinstance
 def myPutStr(string):
     try:
-        # Tenter de convertir en entier ou flottant
+        # conversion en entier ou flottant
         float(string)
-        # Si la conversion réussit, c'est un nombre
+        #conversion réussit, c'est un nombre
         return "et pourquoi pas 42 ?"
     except ValueError:
-        # Si la conversion échoue, ce n'est pas un nombre
+        #conversion échoue, ce n'est pas un nombre
         return string
 
 
 # Test de la fonction
 print(myPutStr("Hello World"))  # Devrait afficher: Hello World
 print(myPutStr("123"))  # Devrait afficher: et pourquoi pas 42 ?
-print(myPutStr("3.14"))  # Devrait afficher: et pourquoi pas 42 ?
-print(myPutStr("42"))  # Devrait afficher: et pourquoi pas 42 ?
+
 
 # Exerice2
 # Créer une fonction “computeSurfaceM2” qui calcule une surface en m² carré. Type de résultat attendu :  “Votre surface et de 200 m2”
