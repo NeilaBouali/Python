@@ -41,47 +41,53 @@ print(computeSurfaceM2(10,20))
 # Créer une fonction “detectMyAgeByNight” capable d’implémenter votre précédent script de la boîte de nuit <
 # et de faire entrer dans une boîte de nuit une personne ayant plus de 18 ans et refusant celles qui ont entre 0 et 17.
 
-
+#
+'''
 age = int(input("Ton age: "))
 def detectMyAgeByNight(age):
     # Demander l'âge de l'utilisateur
      # Vérifier l'âge et afficher le message approprié
     if age < 18:
-             return(f"Vous ne pouvez pas entrer, vous n'êtes pas majeur, vous avez {age} ans.")
+             return(f"Vous ne pouvez pas entrer, vous n'êtes pas majeur, vous avez {age} ans.") #pas de besoin de else pour une condition uniquement deux return
     return(f"Vous pouvez entrer, vous êtes majeur, vous avez {age} ans.")
 
 # Appeler la fonction pour tester
 print(detectMyAgeByNight(age))
-
+'''
 # Exerice 4
 """Faite en sorte de créer une fonction “tableGenerator” capable de générer un tableau matriciel avec des “|” et des ”-”  d’après une liste python à plusieurs dimensions. 
 Se tableau devra obligatoirement comprendre des titres pour chaque colonnes même vide et des valeurs même si vide. 
 Appuyez-vous sur la structure de votre liste pour reproduire votre tableau à l’identique dans votre console."""
 
-test1=[1, 3, 6.7]
-test2=[2, 2, 4]
-test3=[3.33, 1, 2]
+table = [
+    ["", "Test1", "Test2", "Test3"],
+    ["Data1", "1", "2", "3.33"],
+    ["Data2", "3", "2", "1"],
+    ["Data3", "6.7", "4", "2"],
+]
 
 
-test1=[1, 3, 6.7]
-test2=[2, 2, 4]
-test3=[3.33, 1, 2]
-
-def tableGenerator(n):
-    # Générer la table
-    a = [[2] * i + [1] + [0] * (n - i - 1) for i in range(n)]
-
-    # Afficher la table
-    for row in a:
-        print(" ".join([str(elem) for elem in row]))
+def max_taille(table):
+    if not table or not table[0]:
+        return 0
+    return max(len(column) for column in zip(*table))
 
 
-# Définir la taille de la table
-n = 3
+table = [[1, 2, 3], [4, 5, 6], [7, 8]]
+print(max_taille(table)) 
 
 
-# Appeler la fonction pour générer et afficher la table
-tableGenerator(n)
+def tableGenerator(table):
+    for i, row in enumerate(table):
+        rowStr = ""
+
+        for j, col in enumerate(row):
+            rowStr += f"|{col}"
+        if not i:
+            print({max_taille}*" -")
+        print(f"{rowStr}|")
+
+print(tableGenerator(table))
 
 # exercice 5
 from datetime import datetime
@@ -107,7 +113,4 @@ print(is_palindrome(121))
 print(is_palindrome("sjhfbe"))
 print(is_palindrome("ababa"))
 
-#exercice 7
-
-
-
+# exercice 7
