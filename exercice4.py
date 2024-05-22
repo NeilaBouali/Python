@@ -42,20 +42,16 @@ print(computeSurfaceM2(10,20))
 # et de faire entrer dans une boîte de nuit une personne ayant plus de 18 ans et refusant celles qui ont entre 0 et 17.
 
 
-def detectMyAgeByNight():
+age = int(input("Ton age: "))
+def detectMyAgeByNight(age):
     # Demander l'âge de l'utilisateur
-    age = int(input("Ton age: "))
-
-    # Vérifier l'âge et afficher le message approprié
+     # Vérifier l'âge et afficher le message approprié
     if age < 18:
-        print(
-            f"Vous ne pouvez pas entrer, vous n'êtes pas majeur, vous avez {age} ans."
-        )
-    else:
-        print(f"Vous pouvez entrer, vous êtes majeur, vous avez {age} ans.")
+             return(f"Vous ne pouvez pas entrer, vous n'êtes pas majeur, vous avez {age} ans.")
+    return(f"Vous pouvez entrer, vous êtes majeur, vous avez {age} ans.")
 
 # Appeler la fonction pour tester
-# detectMyAgeByNight()
+print(detectMyAgeByNight(age))
 
 # Exerice 4
 """Faite en sorte de créer une fonction “tableGenerator” capable de générer un tableau matriciel avec des “|” et des ”-”  d’après une liste python à plusieurs dimensions. 
